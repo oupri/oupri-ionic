@@ -1,0 +1,19 @@
+[{
+    "group": "Arts & Crafts",
+    "activities": [{
+        "title": "Painting"
+    }, {
+        "title": "Sketching"
+    }, {
+        "title": "Knitting"
+    }]
+}, {
+    "group": "Reading",
+    "activities": [{
+        "title": "Romance"
+    }, {
+        "title": "Self Help"
+    }, {
+        "title": "Business"
+    }]
+}]
