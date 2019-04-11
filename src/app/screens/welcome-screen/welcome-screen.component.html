@@ -9,8 +9,8 @@
 
   <ion-input [(ngModel)]="alias" placeholder="Enter an Alias"></ion-input>
 
-  <a routerLink="/connect">
-    <ion-button expand="block">Let me In</ion-button>
+  <a>
+    <ion-button expand="block" (click)="createMember(alias)">Let me In</ion-button>
   </a>
 
 

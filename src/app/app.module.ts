@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { FormsModule } from '@angular/forms'
-
+import { HttpClientModule } from '@angular/common/http'
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -18,7 +18,7 @@ import { MatchScreenComponent } from './screens/match-screen/match-screen.compon
 import { CallingScreenComponent } from './screens/calling-screen/calling-screen.component'
 import { ReviewScreenComponent } from './screens/review-screen/review-screen.component'
 import { FeedbackScreenComponent } from './screens/feedback-screen/feedback-screen.component'
-
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [AppComponent,
@@ -38,11 +38,13 @@ import { FeedbackScreenComponent } from './screens/feedback-screen/feedback-scre
   imports: [BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    FormsModule],
+    FormsModule,
+    HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    CookieService
   ],
   bootstrap: [AppComponent]
 })
