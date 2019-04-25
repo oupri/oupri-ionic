@@ -9,10 +9,11 @@ export class CommService {
 
   constructor(private http: HttpClient) {
 
-    this.api_base = '';//'http://localhost:3000/api'
+    this.api_base = 'http://localhost:3000/api'//'/api';//
   }
 
   createMember(alias) {
+
     return this.http.post<any>(this.api_base + '/members', { alias: alias })
   }
 }
